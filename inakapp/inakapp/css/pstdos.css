@@ -1,0 +1,123 @@
+.popupwsmenu{
+	color: #4387fd;
+	
+}
+.popupwsmenu span{
+	background-color: #4387fd;
+	color: white;
+	font-weight: lighter;
+}
+.popupwsmenu #tipovarios span{
+	background-color: white;
+	color: #4387fd;
+}
+#pstdos .menu, #pstdos .btncabecera{
+	background: #4387fd;
+	border-color: #999999;
+}
+.pstcabeceradiv{
+	float: left;
+	width: 10%;
+	height: 100px;
+	display: block;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background: #B3D4FC;
+	font-size: 0.8em;
+	padding: 10px;
+}
+.pstcabeceradivdos{
+	float: left;
+	overflow-y: hidden;
+	width: 30%;
+	padding: 10px;
+}
+#pstcabecera{
+	height: 100%;
+	width: 100%;
+	display: block;
+	overflow-x: hidden;
+}
+
+.pstul{
+	margin: 0;
+	width: 10%;
+}
+#psttable{
+	width: 99%;
+}
+
+#psttable th, #popupvarios th{
+	padding:2px;
+	font-size:0.8em;
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	background-color: #355ACE;
+	color: white;
+	font-weight: normal;
+}
+#psttable .verdefilapar, #tablavarios .verdefilapar{
+	background-color: #B3D4FC;
+	padding: 3px;
+	font-size: 0.85em;
+	color: green;
+}
+#psttable .rojofilapar, #tablavarios .rojofilapar{
+	background-color: #B3D4FC;
+	padding: 3px;
+	font-size: 0.85em;
+	color: red;
+}
+#psttable .verdefilaimpar, #tablavarios .verdefilaimpar{
+	padding: 3px;
+	font-size: 0.85em;
+	background-color: #EAEAEA;
+	color: green;
+}
+#psttable .rojofilaimpar, #tablavarios .rojofilaimpar{
+	padding: 3px;
+	font-size: 0.85em;
+	background-color: #EAEAEA;
+	color: red;
+}
+#psttable .filaimpar, #tablavarios .filaimpar{
+	padding: 3px;
+	font-size: 0.85em;
+	background-color: #EAEAEA;
+	color: #045FB4;
+}
+
+#psttable .filapar, #tablavarios .filapar{
+	background-color: #B3D4FC;
+	padding: 3px;
+	font-size: 0.85em;
+	color: #045FB4;
+}
+
+#tablavarios .filaimpar, #tablavarios .filapar{
+	font-size: 0.9em;
+
+}
+
+#psttable td, #tablavarios td{
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	color: #045FB4;
+	text-align: right;
+	padding: 4px;
+	float: left;
+}
+
+#psttable .textoizda, #tablavarios .textoizda{
+	text-align: left;
+
+
+.pstcabecerados{
+	font-size: 0.8em;
+}
+#psttable td {
+	margin: 50px;
+}
+

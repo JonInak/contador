@@ -1,0 +1,107 @@
+
+
+
+#phress .menu, #phress .btncabecera{
+	background: #4387fd;
+	border-color: #999999;
+}
+#btnusuario{
+	background-color:white;
+	font-size:0.6e.m;
+}
+.ptcabeceradiv{
+	float: left;
+	width: 10%;
+	height: 100px;
+	display: block;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background: #B3D4FC;
+	font-size: 0.8em;
+	padding: 10px;
+}
+.ptcabeceradivdos{
+	float: left;
+	overflow-y: hidden;
+	width: 30%;
+	padding: 10px;
+}
+#ptcabecera{
+	height: 100%;
+	width: 100%;
+	display: block;
+	overflow-x: hidden;
+}
+
+#phresumentabledos{
+	width: 30%;
+	
+	background-color: #4387fd;
+	font-size: 1em;
+}
+#phrdivdos{
+	margin: 50px auto 0;
+	max-width: 1300px;
+
+}
+
+
+#phresumentabledos th{
+	padding:2px;
+	/* font-size:0.8em; */
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	/* background-color: #355ACE; */
+	color: white;
+	font-weight: normal;
+}
+#phresumentabledos .dcha{
+	text-align: right;
+}
+
+#phresumentabledos .imputadas{
+	color: black;
+	background-color: #B3D4FC;
+}
+#phresumentabledos .teoricashoy{
+	background-color: #4387fd;
+}
+
+#phresumentabledos .contador td, #phresumentabledos .fuera td, #phresumentabledos .imputadas td{
+	font-weight: bold;
+	background-color: #B3D4FC;
+}
+
+#phresumenhorasmes .imputadas{
+	color: black;
+	background-color: #B3D4FC;
+}
+#phresumentabledos #tablecodigo{
+	padding-right: 7px;
+	padding-left: 7px;
+}
+
+
+#phresumentabledos td{
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	color: #045FB4;
+	text-align: right;
+	padding: 4px;
+	background-color: #EAEAEA;
+}
+#phresumentabledos .total{
+	background-color: #B3D4FC;
+}
+#phresumentabledos .totalsemana{
+	background-color: #4387fd;
+	color: white;
+}
+
+.ptcabecerados{
+	font-size: 0.8em;
+}
+
+

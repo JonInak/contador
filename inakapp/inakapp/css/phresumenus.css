@@ -1,0 +1,259 @@
+.popupwsmenu{
+	color: #4387fd;
+	
+}
+#phrus .cabeceraypie, #phrusdos .cabeceraypie, #phrustres .cabeceraypie{
+	background: #4387fd;
+	border-color: #999999;
+}
+.popupwsmenu span{
+	background-color: #4387fd;
+	color: white;
+	font-weight: lighter;
+}
+.popupwsmenu #asignadoa span, .popupwsmenu #visado span, .popupwsmenu #calculoestructura span, .popupwsmenu #proyectocompleto span, .popupwsmenu #ccespecial span, .popupwsmenu #otros span{
+	background-color: white;
+	color: #4387fd;
+}
+#phrus .menu, #phrus .btncabecera,#phrusdos .menu, #phrusdos .btncabecera,#phrustres .menu, #phrustres .btncabecera{
+	background: #4387fd;
+	border-color: #999999;
+}
+
+#btnusuario{
+	background-color:white;
+	font-size:0.6e.m;
+}
+.ptcabeceradiv{
+	float: left;
+	width: 10%;
+	height: 100px;
+	display: block;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background: #B3D4FC;
+	font-size: 0.8em;
+	padding: 10px;
+}
+.ptcabeceradivdos{
+	float: left;
+	overflow-y: hidden;
+	width: 30%;
+	padding: 10px;
+}
+#ptcabecera{
+	height: 100%;
+	width: 100%;
+	display: block;
+	overflow-x: hidden;
+}
+
+.ptul{
+	margin: 0;
+	width: 10%;
+}
+#phresumenustable{
+	width: 99%;
+	background-color: black;
+	font-size: 1em;
+	text-shadow: 0 0 black;
+	/* outline: thin solid #355ACE; */
+}
+#phresumenustable .horasreales{
+	background-color: gray;
+}
+#phresumenustable .horasvacaciones{
+	background-color: #4caf50;
+}
+#phresumenustable .horasvacaciones a{
+	color: black;
+}
+#phresumenustable .horasbaja{
+	background-color: #673ab7;
+}
+#phresumenustable .naranja{
+	background-color: orange;
+}
+#phresumenushorasmes{
+	width: 99%;
+	font-size: 12px;
+	border-color: #355ACE;
+	/* outline: thin solid #4387fd; */
+
+}
+
+
+#phresumenustable th{
+	padding:2px;
+	/* font-size:0.8em; */
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	/* background-color: #355ACE; */
+	color: white;
+	
+}
+#phresumenustable .dcha{
+	text-align: right;
+}
+#phresumenushorasmes th{
+	padding:2px;
+	border-style: solid;
+	/* border-color: white; */
+	border-width: thin;
+	background-color: #4387fd;
+	color: white;
+	
+	
+}
+#phresumenustable .imputadas{
+	color: black;
+	background-color: #B3D4FC;
+}
+#phresumenushorasmes .imputadas .horasv{
+
+	color: white;
+	text-shadow: 0 0 black;
+	font-family: arial;
+	background-color: #52a70e;
+}
+#phresumenushorasmes .imputadas .horasb{
+
+	color: white;
+	text-shadow: 0 0 black;
+	font-family: arial;
+	background-color: purple;
+}
+#phresumenushorasmes .imputadas .horasgrisdos{
+
+	color: black;
+	font-weight: lighter;
+	font-family: arial;
+	font-size: 13px;
+	background-color: #b0bfc1;
+}
+#phresumenushorasmes .imputadas .horasgris{
+
+	color: black;
+	font-weight: lighter;
+	font-family: arial;
+	font-size: 14px;
+	background-color: white;
+}
+#phresumenushorasmes .horasnaranja{
+
+	color: white;
+	text-shadow: 0 0 black;
+	font-family: arial;
+	background-color: orange;
+}
+#phresumenushorasmes .horasgris{
+
+	color: black;
+	
+	font-family: arial;
+	background-color: #cfd2d8;
+}
+#phresumenushorasmes .gris{
+
+	
+	text-shadow: 0 0 black;
+	font-family: arial;
+	font-size: 13px;
+	background-color: gray;
+}
+#phresumenustable .teoricashoy{
+	background-color: #4387fd;
+}
+.titulomes{
+	font-size: 16px;
+}
+.titulomesnombre{
+	font-size: 18px;	
+}
+#phresumenushorasmes .contador td, #phresumenushorasmes .fuera td,{
+	
+	background-color: #bac3c7;
+}
+
+
+#phresumenushorasmes .horasteoricas{
+	color: white;
+	text-shadow: 0 0 black;
+	background-color: black;
+}
+
+#phresumenushorasmes .horasreales{
+	color: white;
+	text-shadow: 0 0 black;
+	background-color: gray;
+}
+#phresumenushorasmes .horasvacaciones{
+	color: white;
+	text-shadow: 0 0 black;
+	background-color: #4caf50;
+}
+#phresumenushorasmes .horasbaja{
+	color: white;
+	text-shadow: 0 0 black;
+	background-color: #673ab7;
+}
+#phresumenushorasmes .imputadas .horasvacaciones{
+	color: white-space;
+	background-color: #52a70e;
+}
+#phresumenushorasmes td .horasreales {
+    
+    background-color: #gray;
+}
+
+#phresumenustable #tablecodigo{
+	padding-right: 7px;
+	padding-left: 7px;
+}
+#phresumenustabledos {
+	width:99%;
+	background-color: #4387fd;
+	
+}
+#pttablefacturasrecibidas .filaimpar{
+	padding: 3px;
+	font-size: 0.75em;
+	background-color: #EAEAEA;
+
+}
+#pttablefacturasrecibidas .filapar{
+	background-color: #B3D4FC;
+	padding: 3px;
+	font-size: 0.75em;
+
+}
+
+#phresumenushorasmes td{
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	color: black;
+	text-align: right;
+	padding: 4px;
+	
+}
+
+#pttablefacturasrecibidas .textoizda{
+	text-align: left;
+	
+}
+#pttablefacturasrecibidas .visadorojo a{
+	color: #FF0000;
+	background-color: #FF0000;
+	
+}
+
+.ptcabecerados{
+	font-size: 0.8em;
+}
+#vacacionesdisfrutadas a {
+	color: white;
+	font-size: 0.9em;
+	text-decoration: none;	
+}

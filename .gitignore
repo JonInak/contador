@@ -1,0 +1,11 @@
+*.sql
+*.exe
+logs/
+.gemini/
+*.tmp
+temp/
+node_modules/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

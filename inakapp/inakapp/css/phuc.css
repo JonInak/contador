@@ -1,0 +1,100 @@
+.popupwsmenu{
+	color: #4387fd;
+	
+}
+.popupwsmenu span{
+	background-color: #4387fd;
+	color: white;
+	font-weight: lighter;
+}
+.popupwsmenu #asignadoa span, .popupwsmenu #visado span, .popupwsmenu #calculoestructura span, .popupwsmenu #proyectocompleto span, .popupwsmenu #ccespecial span, .popupwsmenu #otros span{
+	background-color: white;
+	color: #4387fd;
+}
+#pfr .menu, #pfr .btncabecera{
+	background: #4387fd;
+	border-color: #999999;
+}
+.ptcabeceradiv{
+	float: left;
+	width: 10%;
+	height: 100px;
+	display: block;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background: #B3D4FC;
+	font-size: 0.8em;
+	padding: 10px;
+}
+.ptcabeceradivdos{
+	float: left;
+	overflow-y: hidden;
+	width: 30%;
+	padding: 10px;
+}
+#ptcabecera{
+	height: 100%;
+	width: 100%;
+	display: block;
+	overflow-x: hidden;
+}
+
+.ptul{
+	margin: 0;
+	width: 10%;
+}
+#phtablehorasresumen, #phtablehorasresumenurte{
+	width: 99%;
+}
+
+#phtablehorasresumen th, #phtablehorasresumenurte th{
+	padding:2px;
+	font-size:0.8em;
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	background-color: #355ACE;
+	color: white;
+	font-weight: normal;
+}
+#phtablehorasresumen #tablecodigo{
+	padding-right: 7px;
+	padding-left: 7px;
+}
+#phtablehorasresumen .filaimpar{
+	padding: 3px;
+	font-size: 0.75em;
+	background-color: #EAEAEA;
+
+}
+#phtablehorasresumen .filapar{
+	background-color: #B3D4FC;
+	padding: 3px;
+	font-size: 0.75em;
+
+}
+
+#phtablehorasresumen td, #phtablehorasresumenurte td{
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	color: #045FB4;
+	text-align: right;
+	padding: 4px;
+	font-size: 0.76em;
+}
+#phtablehorasresumen .textoizda{
+	text-align: left;
+	
+}
+#phtablehorasresumen .visadorojo a{
+	color: #FF0000;
+	background-color: #FF0000;
+	
+}
+
+.ptcabecerados{
+	font-size: 0.8em;
+}
+
+

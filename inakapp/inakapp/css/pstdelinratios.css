@@ -1,0 +1,48 @@
+
+#pstdelinratios .menu, #pstdelinratios .btncabecera{
+	background: #4387fd;
+	border-color: #999999;
+}
+#pstcabeceradelinratios {
+	margin-left: 5em;
+	
+}
+#psttabledelinratios .black{
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	color: white;
+	text-decoration: none;	
+	text-shadow: 0 0 black;
+	font-family: arial;
+	font-size: 15px;
+	background-color: #355ACE;
+	padding: 6px;
+}
+
+#psttabledelinratios .gris{
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	color: #4387fd;
+	text-decoration: none;	
+	text-shadow: 0 0 black;
+	font-family: arial;
+	font-size: 11px;
+	background-color: white;
+	padding: 6px;	
+	
+	
+}
+#psttabledelinratios .grisgrande{	
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	color: #4387fd;
+	text-decoration: none;	
+	text-shadow: 0 0 black;
+	font-family: arial;
+	font-size: 13px;
+	background-color: white;
+	padding: 6px;
+}

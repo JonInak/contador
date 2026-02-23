@@ -1,0 +1,81 @@
+#ptidosh .menu, #ptidosh .btncabecera{
+	background: #4387fd;
+	border-color: #999999;
+}
+
+#ptitable .titulofinal {
+	
+	font-weight: bold;
+	
+	font-size: 1em;
+
+}
+.pticabeceradiv{
+	float: left;
+	width: 10%;
+	height: 100px;
+	display: block;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background: #B3D4FC;
+	font-size: 0.8em;
+	padding: 10px;
+}
+.pticabeceradivdos{
+	float: left;
+	overflow-y: hidden;
+	width: 30%;
+	padding: 10px;
+}
+#pticabecera{
+	height: 100%;
+	width: 100%;
+	display: block;
+	overflow-x: hidden;
+}
+
+.ptiul{
+	margin: 0;
+	width: 10%;
+}
+#ptitable{
+	width: 99%;
+}
+#ptitable th{
+	padding:2px;
+	font-size:1em;
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	background-color: #355ACE;
+	color: white;
+	font-weight: normal;
+}
+#ptitable .filaimpar{
+	padding: 3px;
+	font-size: 0.8em;
+	background-color: #EAEAEA;
+
+}
+#ptitable .filapar{
+	background-color: #B3D4FC;
+	padding: 3px;
+	font-size: 0.8em;
+
+}
+#ptitable td{
+	border-style: solid;
+	border-color: white;
+	border-width: thin;
+	color: #045FB4;
+	text-align: right;
+	padding: 4px;
+	font-size: 1em;
+}
+#ptitable .textoizda{
+	text-align: left;
+
+.pticabecerados{
+	font-size: 0.8em;
+}
+

@@ -1,0 +1,45 @@
+#ptne .menu, #ptne .btncabecera{
+	background: #4387fd;
+	border-color: #999999;
+	
+}
+#formtrabajonuevo .textoazul{
+	color: #4387fd;
+	
+}
+#formtrabajonuevo div div{
+	color: white;
+	
+	background: #4387fd;
+	
+	
+	
+}
+#guardartrabajo{
+	color: #4387fd;
+	
+	
+
+	
+}
+#guardartrabajo .textoazul{
+	color: #4387fd;
+	
+	
+	
+	
+}
+#formtrabajonuevo .trabajoguardado{
+	background: white;
+	color: #4387fd;
+	border-radius: 7px;
+	text-align: center;
+	width: 25%;
+	margin-left: 37.5%;
+	
+	
+	
+	
+}
+
+
