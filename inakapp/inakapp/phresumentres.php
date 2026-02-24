@@ -165,34 +165,41 @@ if (!isset($_SESSION['usuario'])) {
 
 				<div data-role="content" class="anchocontenidodesktop">
 
-					<div class="leyenda-horas">
-						<span><span class="dot dot-contador"></span> Fichaje</span>
-						<span><span class="dot dot-fuera"></span> Horas fuera oficina</span>
-						<span><span class="dot dot-imputadas"></span> Horas imputadas</span>
+					<!-- DASHBOARD KPI CARDS -->
+					<div class="kpi-dashboard">
+						<div class="kpi-card kpi-primary">
+							<div class="kpi-title">HORAS TRABAJADAS + VACACIONES</div>
+							<div class="kpi-value" id="horasrealesurtedos">0.00</div>
+						</div>
+						<div class="kpi-card">
+							<div class="kpi-title">HORAS TEÓRICAS + VACACIONES</div>
+							<div class="kpi-value" id="horasteoricasurte">0.00</div>
+						</div>
+						<div class="kpi-card kpi-warning">
+							<div class="kpi-title">HORAS BOLSA</div>
+							<div class="kpi-value" id="horascomplementarias">0.00</div>
+						</div>
+						<div class="kpi-card kpi-info">
+							<div class="kpi-title" style="display:flex; justify-content:space-between; align-items:center;">
+								VACACIONES 
+								<a href="#popupvacaciones" data-rel="popup" data-position-to="window" data-transition="pop" class="kpi-link">VER</a>
+							</div>
+							<div class="kpi-value" id="vacacionesdisfrutadasdos">0.00</div>
+						</div>
 					</div>
+					<!-- FIN DASHBOARD -->
+
+					<div class="leyenda-horas" style="margin-top: 24px;">
+						<div id="tablecodigo" class="dashboard-user-title"></div>
+						<div style="display:flex; gap:16px;">
+							<span><span class="dot dot-contador"></span> Fichaje</span>
+							<span><span class="dot dot-fuera"></span> Horas fuera oficina</span>
+							<span><span class="dot dot-imputadas"></span> Horas imputadas</span>
+						</div>
+					</div>
+					
 					<div id="tablasmeses">
-
-						<table id="phresumentable">
-							<tr>
-								<th colspan="42" rowspan="3" id="tablecodigo" width=50%> </th>
-								<th colspan="3" class="dcha"> HORAS TRABAJADAS + HORAS VACACIONES:</th>
-								<th colspan="3" id="horasrealesurtedos"> X </th>
-							</tr>
-
-							<tr>
-								<th colspan="3" class="dcha"> HORAS TEÓRICAS + HORAS VACACIONES:</th>
-								<th colspan="3" id="horascalendariourtehoydos"> Z </th>
-							</tr>
-							<tr>
-								<th colspan="3" class="dcha"> H BOLSA: </th>
-								<th colspan="3" id="horasorientativasvacaciones"> W </th>
-							</tr>
-
-
-
-
-						</table>
-					</div>
+					</div><!-- /tablasmeses -->
 
 				</div><!-- /page -->
 				<?php

@@ -263,7 +263,7 @@ $(document).delegate('#phrtres', 'pagecreate', function () {
 								horas = Math.round(horas * 100) / 100;
 								horasdia = horasdia + horas;
 								horasdia = Math.round(horasdia * 100) / 100;
-								arrayfilas[numarrayfilas] = arrayfilas[numarrayfilas] + "<td>" + arrayfechaentrada[4].substr(0, 5) + "</td><td>" + arrayfechasalida[4].substr(0, 5) + "</td><td>" + horas + "</td>"
+								arrayfilas[numarrayfilas] = arrayfilas[numarrayfilas] + "<td>" + arrayfechaentrada[4].substr(0, 5) + "</td><td>" + arrayfechasalida[4].substr(0, 5) + "</td><td><span class='pill'>" + horas + "</span></td>"
 								numarrayfilas = numarrayfilas + 1;
 
 								arrayfilahoras[numarrayfilahoras] = arrayfilahoras[numarrayfilahoras] + horas;
@@ -401,7 +401,7 @@ $(document).delegate('#phrtres', 'pagecreate', function () {
 								horas = Math.round(horas * 100) / 100;
 								horasdia = horasdia + horas;
 								horasdia = Math.round(horasdia * 100) / 100;
-								arrayfilas_[numarrayfilas] = arrayfilas_[numarrayfilas] + "<td>" + arrayfechaentrada[4].substr(0, 5) + "</td><td>" + arrayfechasalida[4].substr(0, 5) + "</td><td>" + horas + "</td>"
+								arrayfilas_[numarrayfilas] = arrayfilas_[numarrayfilas] + "<td>" + arrayfechaentrada[4].substr(0, 5) + "</td><td>" + arrayfechasalida[4].substr(0, 5) + "</td><td><span class='pill'>" + horas + "</span></td>"
 								numarrayfilas = numarrayfilas + 1;
 
 								arrayfilahoras[numarrayfilahoras] = arrayfilahoras[numarrayfilahoras] + horas;
@@ -518,7 +518,7 @@ $(document).delegate('#phrtres', 'pagecreate', function () {
 			var horascontador;
 			for (i in arrayfilahoras) {
 				arrayfilahoras[i] = Math.round(arrayfilahoras[i] * 100) / 100;
-				horascontador = horascontador + "<td></td><td></td><td>" + arrayfilahoras[i] + "</td>"
+				horascontador = horascontador + "<td></td><td></td><td><span class='pill pill-contador'>" + arrayfilahoras[i] + "</span></td>"
 			};
 			$("#" + mes + " table").append("<tr class='contador borrar'>" + horascontador + "</tr>");
 			horascontador = "";
@@ -535,7 +535,7 @@ $(document).delegate('#phrtres', 'pagecreate', function () {
 				}
 
 			}
-			arrayfilahorasfuera = arrayfilahorasfuera + "<td></td><td></td><td>" + (Math.round(horasfuera * 100) / 100) + "</td>"
+			arrayfilahorasfuera = arrayfilahorasfuera + "<td></td><td></td><td><span class='pill pill-fuera'>" + (Math.round(horasfuera * 100) / 100) + "</span></td>"
 		},
 		"horasfueraadjuntar": function () {
 			$("#" + mes + " table").append("<tr class='fuera borrar'>" + arrayfilahorasfuera + "</tr>");
@@ -552,7 +552,7 @@ $(document).delegate('#phrtres', 'pagecreate', function () {
 				}
 
 			}
-			arrayfilahorasimputadas = arrayfilahorasimputadas + "<td></td><td></td><td>" + (Math.round(horasimputadas * 100) / 100) + "</td>"
+			arrayfilahorasimputadas = arrayfilahorasimputadas + "<td></td><td></td><td><span class='pill pill-imputadas'>" + (Math.round(horasimputadas * 100) / 100) + "</span></td>"
 		},
 		"horasimputadasadjuntar": function () {
 			$("#" + mes + " table").append("<tr class='imputadas borrar'>" + arrayfilahorasimputadas + "</tr>");
