@@ -80,12 +80,12 @@ if (!isset($_SESSION['usuario'])) {
 				<?php
 				require_once("head.php");
 				?>
-				<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+				<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
 					rel="stylesheet">
 				<style>
 					#phrtres,
 					#phrtres * {
-						font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+						font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 					}
 				</style>
 				<!-- <script src="js/lsttrabajos.js"></script> -->
@@ -180,7 +180,7 @@ if (!isset($_SESSION['usuario'])) {
 							<div class="kpi-value" id="horascomplementarias">0.00</div>
 						</div>
 						<div class="kpi-card kpi-info">
-							<div class="kpi-title" style="display:flex; justify-content:space-between; align-items:center;">
+							<div class="kpi-title kpi-title-with-action">
 								VACACIONES 
 								<a href="#popupvacaciones" data-rel="popup" data-position-to="window" data-transition="pop" class="kpi-link">VER</a>
 							</div>
@@ -189,17 +189,33 @@ if (!isset($_SESSION['usuario'])) {
 					</div>
 					<!-- FIN DASHBOARD -->
 
-					<div class="leyenda-horas" style="margin-top: 24px;">
+					<div class="leyenda-horas">
 						<div id="tablecodigo" class="dashboard-user-title"></div>
-						<div style="display:flex; gap:16px;">
-							<span><span class="dot dot-contador"></span> Fichaje</span>
-							<span><span class="dot dot-fuera"></span> Horas fuera oficina</span>
-							<span><span class="dot dot-imputadas"></span> Horas imputadas</span>
+						<div class="leyenda-items">
+							<span class="leyenda-item"><span class="dot dot-contador"></span> Fichaje</span>
+							<span class="leyenda-item"><span class="dot dot-fuera"></span> Horas fuera oficina</span>
+							<span class="leyenda-item"><span class="dot dot-imputadas"></span> Horas imputadas</span>
 						</div>
 					</div>
-					
-					<div id="tablasmeses">
-					</div><!-- /tablasmeses -->
+
+					<div class="calendar-toolbar">
+						<div class="calendar-view-switch">
+							<button type="button" id="viewCurrentMonth" class="calendar-switch-btn is-active">Mes actual</button>
+							<button type="button" id="viewFullYear" class="calendar-switch-btn">AÃ±o completo</button>
+						</div>
+						<div id="currentMonthLabel" class="calendar-current-label"></div>
+					</div>
+
+					<div id="tablasmeses" class="calendar-months"></div><!-- /tablasmeses -->
+
+					<div id="dayDetailPanel" class="day-detail-panel is-empty">
+						<div class="day-detail-head">
+							<h3 id="dayDetailTitle">Detalle del dia</h3>
+						</div>
+						<div id="dayDetailContent" class="day-detail-content">
+							Selecciona un dia del calendario para ver Entrada, Salida y Horas.
+						</div>
+					</div>
 
 				</div><!-- /page -->
 				<?php
