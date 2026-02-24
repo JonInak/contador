@@ -889,7 +889,58 @@
 }
 
 #phrtres .calendar-months.is-year-view {
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* --- Vista año: celdas compactas --- */
+#phrtres .is-year-view .calendar-day {
+    min-height: auto;
+    padding: 4px;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+#phrtres .is-year-view .calendar-day.calendar-day-empty {
+    min-height: auto;
+    padding: 4px;
+}
+
+#phrtres .is-year-view .calendar-month-header {
+    padding: 6px 10px;
+}
+
+#phrtres .is-year-view .calendar-month-header h3 {
+    font-size: 14px;
+}
+
+#phrtres .is-year-view .calendar-month-kpis {
+    display: none;
+}
+
+#phrtres .is-year-view .calendar-weekday {
+    font-size: 9px;
+    padding: 4px 2px;
+}
+
+/* Dot indicador de estado */
+#phrtres .calendar-day-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #94a3b8;
+}
+
+#phrtres .calendar-day.has-data .calendar-day-dot {
+    background: #3b82f6;
+}
+
+#phrtres .calendar-day.has-vacation .calendar-day-dot {
+    background: #10b981;
+}
+
+#phrtres .calendar-day.has-baja .calendar-day-dot {
+    background: #f59e0b;
 }
 
 #phrtres .calendar-month-card {
@@ -1216,6 +1267,10 @@
     #phrtres .calendar-day.calendar-day-empty {
         min-height: 94px;
     }
+
+    #phrtres .calendar-months.is-year-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (max-width: 740px) {
@@ -1230,7 +1285,7 @@
     }
 
     #phrtres .calendar-months.is-year-view {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #phrtres .calendar-day {

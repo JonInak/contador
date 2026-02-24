@@ -472,12 +472,16 @@
 
             html += '<button type="button" class="' + classes.join(' ') + '" data-date="' + isoDate + '">';
             html += '<span class="calendar-day-number">' + day + '</span>';
-            html += '<div class="calendar-day-lines">' + renderEntryPreview(metrics.entries) + '</div>';
-            html += '<div class="calendar-day-metrics">';
-            html += '<span class="m-f" title="Fichaje">F: ' + formatHours(metrics.fichaje) + '</span>';
-            html += '<span class="m-o" title="Fuera oficina">O: ' + formatHours(metrics.fuera) + '</span>';
-            html += '<span class="m-i" title="Imputadas">I: ' + formatHours(metrics.imputadas) + '</span>';
-            html += '</div>';
+            if (state.viewMode === 'year') {
+                html += '<span class="calendar-day-dot"></span>';
+            } else {
+                html += '<div class="calendar-day-lines">' + renderEntryPreview(metrics.entries) + '</div>';
+                html += '<div class="calendar-day-metrics">';
+                html += '<span class="m-f" title="Fichaje">F: ' + formatHours(metrics.fichaje) + '</span>';
+                html += '<span class="m-o" title="Fuera oficina">O: ' + formatHours(metrics.fuera) + '</span>';
+                html += '<span class="m-i" title="Imputadas">I: ' + formatHours(metrics.imputadas) + '</span>';
+                html += '</div>';
+            }
             html += '</button>';
         }
 
