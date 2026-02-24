@@ -131,7 +131,7 @@ if (!isset($_SESSION['usuario'])) {
 					<a href="#panelfacturasemitidas" data-icon="bars" class="btncabecera" data-back-btn-text="previous">Menu</a>
 					<h1>Inak Ingeniaritza - Resumen horas</h1>
 					<div class="ui-btn-right" data-role="controlgroup" data-type="horizontal">
-						<a id="filtrourte" href="#popupurte" data-role="button" class="btncabecera " data-rel="popup">Año</a>
+						<a id="filtrourte" href="#popupurte" data-role="button" class="btncabecera " data-rel="popup">A&ntilde;o</a>
 					</div>
 					<label id="usuariooculto"> <?php
 					echo $_SESSION['usuario'];
@@ -155,8 +155,8 @@ if (!isset($_SESSION['usuario'])) {
 				<div data-role="popup" id="popupurte" class="ui-corner-all">
 					<form class="popupwsmenu">
 						<div style="padding:10px 20px;">
-							<h3>AÑO</h3>
-							<input type="number" id="modfecha" value="2017" placeholder="año">
+							<h3>A&Ntilde;O</h3>
+							<input type="number" id="modfecha" value="2017" placeholder="a&ntilde;o">
 							<button id="botonurte" type="button"
 								class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Aceptar</button>
 						</div>
@@ -184,26 +184,35 @@ if (!isset($_SESSION['usuario'])) {
 								VACACIONES 
 								<a href="#popupvacaciones" data-rel="popup" data-position-to="window" data-transition="pop" class="kpi-link">VER</a>
 							</div>
-							<div class="kpi-value" id="vacacionesdisfrutadasdos">0.00</div>
+							<div class="kpi-vac-hours">
+								<div class="vac-hour-pill vac-hour-ht">
+									<span>HT</span>
+									<strong id="vacacionesHtValue">0</strong>
+								</div>
+								<div class="vac-hour-pill vac-hour-hr">
+									<span>HR</span>
+									<strong id="vacacionesHrValue">0</strong>
+								</div>
+							</div>
+							<div class="kpi-value kpi-value-muted" id="vacacionesdisfrutadasdos">0</div>
 						</div>
 					</div>
 					<!-- FIN DASHBOARD -->
 
 					<div class="leyenda-horas">
 						<div id="tablecodigo" class="dashboard-user-title"></div>
-						<div class="leyenda-items">
-							<span class="leyenda-item"><span class="dot dot-contador"></span> Fichaje</span>
-							<span class="leyenda-item"><span class="dot dot-fuera"></span> Horas fuera oficina</span>
-							<span class="leyenda-item"><span class="dot dot-imputadas"></span> Horas imputadas</span>
-						</div>
 					</div>
 
 					<div class="calendar-toolbar">
 						<div class="calendar-view-switch">
 							<button type="button" id="viewCurrentMonth" class="calendar-switch-btn is-active">Mes actual</button>
-							<button type="button" id="viewFullYear" class="calendar-switch-btn">AÃ±o completo</button>
+							<button type="button" id="viewFullYear" class="calendar-switch-btn">A&ntilde;o completo</button>
 						</div>
-						<div id="currentMonthLabel" class="calendar-current-label"></div>
+						<div class="leyenda-items">
+							<span class="leyenda-item"><span class="dot dot-contador"></span> Fichaje</span>
+							<span class="leyenda-item"><span class="dot dot-fuera"></span> Horas fuera oficina</span>
+							<span class="leyenda-item"><span class="dot dot-imputadas"></span> Horas imputadas</span>
+						</div>
 					</div>
 
 					<div id="tablasmeses" class="calendar-months"></div><!-- /tablasmeses -->

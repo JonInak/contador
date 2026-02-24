@@ -44,7 +44,6 @@
         userTitle: $('#tablecodigo'),
         monthButton: $('#viewCurrentMonth'),
         yearViewButton: $('#viewFullYear'),
-        currentLabel: $('#currentMonthLabel'),
         monthsContainer: $('#tablasmeses'),
         dayDetailPanel: $('#dayDetailPanel'),
         dayDetailTitle: $('#dayDetailTitle'),
@@ -425,17 +424,15 @@
         var daysInMonth = new Date(state.year, month, 0).getDate();
         var firstDay = new Date(state.year, month - 1, 1).getDay();
         var offset = (firstDay + 6) % 7;
-        var monthHr = realHoursMonth(month);
-        var monthHt = calendarHoursMonth(month, true);
-
         var html = '';
-        html += '<section class="calendar-month-card" data-month="' + month + '">';
+        var monthCardClasses = ['calendar-month-card'];
+        if (state.viewMode === 'month' && month === state.currentMonth) {
+            monthCardClasses.push('is-current-month-view');
+        }
+
+        html += '<section class="' + monthCardClasses.join(' ') + '" data-month="' + month + '">';
         html += '<header class="calendar-month-header">';
         html += '<h3>' + monthName(month) + '</h3>';
-        html += '<div class="calendar-month-kpis">';
-        html += '<span class="month-kpi ht"><em>HT</em><strong>' + formatHours(monthHt) + '</strong></span>';
-        html += '<span class="month-kpi hr"><em>HR</em><strong>' + formatHours(monthHr) + '</strong></span>';
-        html += '</div>';
         html += '</header>';
 
         html += '<div class="calendar-weekdays">';
@@ -477,9 +474,9 @@
             html += '<span class="calendar-day-number">' + day + '</span>';
             html += '<div class="calendar-day-lines">' + renderEntryPreview(metrics.entries) + '</div>';
             html += '<div class="calendar-day-metrics">';
-            html += '<span class="m-f" title="Fichaje">F ' + formatHours(metrics.fichaje) + '</span>';
-            html += '<span class="m-o" title="Fuera oficina">O ' + formatHours(metrics.fuera) + '</span>';
-            html += '<span class="m-i" title="Imputadas">I ' + formatHours(metrics.imputadas) + '</span>';
+            html += '<span class="m-f" title="Fichaje">F: ' + formatHours(metrics.fichaje) + '</span>';
+            html += '<span class="m-o" title="Fuera oficina">O: ' + formatHours(metrics.fuera) + '</span>';
+            html += '<span class="m-i" title="Imputadas">I: ' + formatHours(metrics.imputadas) + '</span>';
             html += '</div>';
             html += '</button>';
         }
@@ -513,12 +510,10 @@
             dom.yearViewButton.addClass('is-active');
             dom.monthButton.removeClass('is-active');
             dom.monthsContainer.addClass('is-year-view');
-            dom.currentLabel.text('Ano completo ' + state.year);
         } else {
             dom.monthButton.addClass('is-active');
             dom.yearViewButton.removeClass('is-active');
             dom.monthsContainer.removeClass('is-year-view');
-            dom.currentLabel.text(monthName(state.currentMonth) + ' ' + state.year);
         }
     }
 
@@ -531,6 +526,8 @@
         var horasReales = state.hoursTotals.realYear;
         var horasCalendarioHoy = calendarHoursYear(true);
         var horasCalendarioYear = calendarHoursYear(false);
+        var horasCalendarioMesActual = calendarHoursMonth(state.currentMonth, true);
+        var horasRealesMesActual = realHoursMonth(state.currentMonth);
         var horasTeoricas = theoreticalYearHours();
         var horasComplementarias = round2(horasReales - horasCalendarioHoy);
         var vacaciones = state.hoursTotals.vacYear;
@@ -541,6 +538,8 @@
         $('#horasteoricasurte').text(formatHours(horasTeoricas));
         $('#horascomplementarias').text(formatHours(horasComplementarias));
         $('#vacacionesdisfrutadasdos').text(formatHours(vacaciones));
+        $('#vacacionesHtValue').text(formatHours(horasCalendarioMesActual));
+        $('#vacacionesHrValue').text(formatHours(horasRealesMesActual));
 
         if ($('#vacacionesdisfrutadas').length) {
             $('#vacacionesdisfrutadas').text(formatHours(vacaciones));
