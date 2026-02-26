@@ -968,14 +968,41 @@
     letter-spacing: 0.01em;
 }
 
+#phrtres .month-header-link {
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+#phrtres .month-header-link:hover {
+    opacity: 0.75;
+}
+
+#phrtres .month-nav-btn {
+    background: none;
+    border: none;
+    color: #eaf1ff;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 6px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+#phrtres .month-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
 #phrtres .calendar-month-card.is-current-month-view .calendar-month-header {
     justify-content: center;
-    padding-left: 18px;
-    padding-right: 18px;
+    gap: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 #phrtres .calendar-month-card.is-current-month-view .calendar-month-header h3 {
-    width: 100%;
+    width: auto;
     text-align: center;
 }
 

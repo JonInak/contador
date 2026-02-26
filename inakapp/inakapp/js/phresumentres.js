@@ -432,7 +432,13 @@
 
         html += '<section class="' + monthCardClasses.join(' ') + '" data-month="' + month + '">';
         html += '<header class="calendar-month-header">';
-        html += '<h3>' + monthName(month) + '</h3>';
+        if (state.viewMode === 'month') {
+            html += '<button type="button" class="month-nav-btn month-nav-prev" title="Mes anterior">&#8249;</button>';
+            html += '<h3>' + monthName(month) + '</h3>';
+            html += '<button type="button" class="month-nav-btn month-nav-next" title="Mes siguiente">&#8250;</button>';
+        } else {
+            html += '<h3 class="month-header-link">' + monthName(month) + '</h3>';
+        }
         html += '</header>';
 
         html += '<div class="calendar-weekdays">';
@@ -671,6 +677,23 @@
 
         dom.monthsContainer.off('click', '.calendar-day[data-date]').on('click', '.calendar-day[data-date]', function () {
             renderDayDetail($(this).data('date'));
+        });
+
+        dom.monthsContainer.off('click', '.month-header-link').on('click', '.month-header-link', function () {
+            var month = parseInt($(this).closest('.calendar-month-card').data('month'), 10);
+            state.currentMonth = month;
+            state.viewMode = 'month';
+            renderCalendar();
+        });
+
+        dom.monthsContainer.off('click', '.month-nav-prev').on('click', '.month-nav-prev', function () {
+            state.currentMonth = state.currentMonth > 1 ? state.currentMonth - 1 : 12;
+            renderCalendar();
+        });
+
+        dom.monthsContainer.off('click', '.month-nav-next').on('click', '.month-nav-next', function () {
+            state.currentMonth = state.currentMonth < 12 ? state.currentMonth + 1 : 1;
+            renderCalendar();
         });
     }
 
