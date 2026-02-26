@@ -166,12 +166,7 @@ if(!isset($_SESSION['usuario']))
 								<!-- <?php
 								require_once ("fases.php");
 								?> -->
-								<!-- <?php
-								for ($x = 0; $x < count($arrayfases); $x++) {
-								echo "<li>" + $arrayfases[$x] + "</li>";
-								print("hola");
-								}
-								?> -->
+								<!-- fases loop comentado -->
 							</ul>
 						</div>
 						<div id="horasdetalle">

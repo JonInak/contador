@@ -487,6 +487,9 @@
                 html += '<span class="m-o" title="Fuera oficina">O: ' + formatHours(metrics.fuera) + '</span>';
                 html += '<span class="m-i" title="Imputadas">I: ' + formatHours(metrics.imputadas) + '</span>';
                 html += '</div>';
+                if (metrics.hasData && metrics.fichaje > 0 && (!metrics.imputadas || metrics.imputadas === 0)) {
+                    html += '<span class="calendar-day-alert">Sin imputar</span>';
+                }
             }
             html += '</button>';
         }
