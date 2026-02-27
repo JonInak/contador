@@ -477,17 +477,22 @@
             }
 
             html += '<button type="button" class="' + classes.join(' ') + '" data-date="' + isoDate + '">';
+            html += '<div class="calendar-day-header">';
             html += '<span class="calendar-day-number">' + day + '</span>';
+
             if (state.viewMode === 'year') {
                 html += '<span class="calendar-day-dot"></span>';
+                html += '</div>';
             } else {
-                // Conteo de fichajes en lugar de horas detalladas
+                // Conteo de fichajes a la derecha del numero
                 var nFich = metrics.entries ? metrics.entries.length : 0;
                 if (nFich > 0) {
                     html += '<span class="calendar-day-fichajes">' + nFich + ' fichaje' + (nFich > 1 ? 's' : '') + '</span>';
                 } else {
                     html += '<span class="calendar-day-fichajes calendar-day-fichajes-empty">Sin fichajes</span>';
                 }
+                html += '</div>';
+
                 html += '<div class="calendar-day-metrics">';
                 html += '<span class="m-f" title="Fichaje"><span>F</span><span>' + formatHours(metrics.fichaje) + '</span></span>';
                 html += '<span class="m-o" title="Fuera oficina"><span>O</span><span>' + formatHours(metrics.fuera) + '</span></span>';
