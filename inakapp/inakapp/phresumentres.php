@@ -180,21 +180,16 @@ if (!isset($_SESSION['usuario'])) {
 							<div class="kpi-value" id="horascomplementarias">0.00</div>
 						</div>
 						<div class="kpi-card kpi-info">
-							<div class="kpi-title kpi-title-with-action">
-								VACACIONES 
-								<a href="#popupvacaciones" data-rel="popup" data-position-to="window" data-transition="pop" class="kpi-link">VER</a>
-							</div>
 							<div class="kpi-vac-hours">
 								<div class="vac-hour-pill vac-hour-ht">
-									<span>HT</span>
+									<span>Horas te&oacute;ricas</span>
 									<strong id="vacacionesHtValue">0</strong>
 								</div>
 								<div class="vac-hour-pill vac-hour-hr">
-									<span>HR</span>
+									<span>Horas reales</span>
 									<strong id="vacacionesHrValue">0</strong>
 								</div>
 							</div>
-							<div class="kpi-value kpi-value-muted" id="vacacionesdisfrutadasdos">0</div>
 						</div>
 					</div>
 					<!-- FIN DASHBOARD -->
@@ -215,14 +210,15 @@ if (!isset($_SESSION['usuario'])) {
 						</div>
 					</div>
 
-					<div id="tablasmeses" class="calendar-months"></div><!-- /tablasmeses -->
-
-					<div id="dayDetailPanel" class="day-detail-panel is-empty">
-						<div class="day-detail-head">
-							<h3 id="dayDetailTitle">Detalle del dia</h3>
-						</div>
-						<div id="dayDetailContent" class="day-detail-content">
-							Selecciona un dia del calendario para ver Entrada, Salida y Horas.
+					<div class="calendar-layout">
+						<div id="tablasmeses" class="calendar-months"></div>
+						<div id="dayDetailPanel" class="day-detail-panel is-empty">
+							<div class="day-detail-head">
+								<h3 id="dayDetailTitle">Detalle del dia</h3>
+							</div>
+							<div id="dayDetailContent" class="day-detail-content">
+								Selecciona un dia del calendario para ver Entrada, Salida y Horas.
+							</div>
 						</div>
 					</div>
 

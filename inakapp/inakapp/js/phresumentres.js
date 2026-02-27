@@ -481,15 +481,22 @@
             if (state.viewMode === 'year') {
                 html += '<span class="calendar-day-dot"></span>';
             } else {
-                html += '<div class="calendar-day-lines">' + renderEntryPreview(metrics.entries) + '</div>';
+                // Conteo de fichajes en lugar de horas detalladas
+                var nFich = metrics.entries ? metrics.entries.length : 0;
+                if (nFich > 0) {
+                    html += '<span class="calendar-day-fichajes">' + nFich + ' fichaje' + (nFich > 1 ? 's' : '') + '</span>';
+                } else {
+                    html += '<span class="calendar-day-fichajes calendar-day-fichajes-empty">Sin fichajes</span>';
+                }
                 html += '<div class="calendar-day-metrics">';
                 html += '<span class="m-f" title="Fichaje">F: ' + formatHours(metrics.fichaje) + '</span>';
                 html += '<span class="m-o" title="Fuera oficina">O: ' + formatHours(metrics.fuera) + '</span>';
-                html += '<span class="m-i" title="Imputadas">I: ' + formatHours(metrics.imputadas) + '</span>';
-                html += '</div>';
                 if (metrics.hasData && metrics.fichaje > 0 && (!metrics.imputadas || metrics.imputadas === 0)) {
-                    html += '<span class="calendar-day-alert">Sin imputar</span>';
+                    html += '<span class="m-i m-sin-imputar">Sin imputar</span>';
+                } else {
+                    html += '<span class="m-i" title="Imputadas">I: ' + formatHours(metrics.imputadas) + '</span>';
                 }
+                html += '</div>';
             }
             html += '</button>';
         }
