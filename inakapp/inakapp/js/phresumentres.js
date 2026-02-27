@@ -393,9 +393,9 @@
 
         var html = '';
         html += '<div class="day-detail-metrics">';
-        html += '<div class="detail-pill detail-fichaje"><span>Fichaje</span><strong>' + formatHours(metrics.fichaje) + ' h</strong></div>';
-        html += '<div class="detail-pill detail-fuera"><span>Fuera oficina</span><strong>' + formatHours(metrics.fuera) + ' h</strong></div>';
-        html += '<div class="detail-pill detail-imputadas"><span>Imputadas</span><strong>' + formatHours(metrics.imputadas) + ' h</strong></div>';
+        html += '<div class="detail-pill"><span>Total Fichajes</span><strong style="color: #2563eb;">' + formatHours(metrics.fichaje) + ' h</strong></div>';
+        html += '<div class="detail-pill"><span>Fuera de oficina</span><strong style="color: #d97706;">' + formatHours(metrics.fuera) + ' h</strong></div>';
+        html += '<div class="detail-pill"><span>Horas Imputadas</span><strong style="color: #16a34a;">' + formatHours(metrics.imputadas) + ' h</strong></div>';
         html += '</div>';
 
         if (metrics.entries.length > 0) {
@@ -489,12 +489,12 @@
                     html += '<span class="calendar-day-fichajes calendar-day-fichajes-empty">Sin fichajes</span>';
                 }
                 html += '<div class="calendar-day-metrics">';
-                html += '<span class="m-f" title="Fichaje">F: ' + formatHours(metrics.fichaje) + '</span>';
-                html += '<span class="m-o" title="Fuera oficina">O: ' + formatHours(metrics.fuera) + '</span>';
+                html += '<span class="m-f" title="Fichaje"><span>F</span><span>' + formatHours(metrics.fichaje) + '</span></span>';
+                html += '<span class="m-o" title="Fuera oficina"><span>O</span><span>' + formatHours(metrics.fuera) + '</span></span>';
                 if (metrics.hasData && metrics.fichaje > 0 && (!metrics.imputadas || metrics.imputadas === 0)) {
                     html += '<span class="m-i m-sin-imputar">Sin imputar</span>';
                 } else {
-                    html += '<span class="m-i" title="Imputadas">I: ' + formatHours(metrics.imputadas) + '</span>';
+                    html += '<span class="m-i" title="Imputadas"><span>I</span><span>' + formatHours(metrics.imputadas) + '</span></span>';
                 }
                 html += '</div>';
             }
